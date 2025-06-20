@@ -1,5 +1,5 @@
 section .data
-    msg     db      "Hello world!", 10  ; message + newline
+    msg     db      "Hello World!", 10  ; message + newline
     msglen  equ     $ - msg              ; length of the message
 
 section .text
