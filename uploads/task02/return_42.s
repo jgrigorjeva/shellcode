@@ -1,7 +1,8 @@
-.intel_syntax noprefix
-.globl main
-.text
+section .text
+    global _start
 
-main:
-    mov eax, 42
-    ret
+_start:
+    ; Exit syscall with status code 42
+    mov rax, 60     ; syscall number for exit
+    mov rdi, 42     ; exit code 42
+    syscall         ; invoke kernel
